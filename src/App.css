@@ -1,0 +1,69 @@
+.left li{
+  margin-bottom: 20px
+}
+
+.dashboard_links:hover{
+  color: coral !important;
+}
+.dashboard_links:focus{
+  color: yellow !important;
+  text-decoration: underline !important;
+}
+
+
+
+/* Zipper Styling */
+@media screen and (min-width:1200px){
+  .zipper, .t-shirt, .jeans{
+    padding: 10px 140px
+  }
+  .zipper .img, .t-shirt .img, .jeans .img{
+    height: 300px;
+  }
+}
+@media screen and (max-width:1199px){
+  .zipper, .t-shirt, .jeans{
+    padding: 10px 60px
+  }
+  .zipper .img, .t-shirt .img, .jeans .img{
+    height: 250px;
+  }  
+}
+@media screen and (max-width:899px){
+  .zipper, .t-shirt, .jeans{
+    padding: 10px 50px
+  }
+  .zipper .img, .t-shirt .img, .jeans .img{
+    height: 320px;
+  }  
+}
+@media screen and (max-width:600px){
+  .zipper, .t-shirt, .jeans{
+    padding: 10px 70px
+  }
+  .zipper .img, .t-shirt .img, .jeans .img{
+      height: 380px;
+  }
+}
+@media screen and (max-width:480px){
+  .zipper, .t-shirt, .jeans{
+    padding: 10px 40px
+  }
+  .zipper .img, .t-shirt .img, .jeans .img{
+      height: 320px;
+  }
+  .all_categories_heading{
+    font-size: 50px !important;
+  }
+}
+@media screen and (max-width:400px){
+.zipper, .t-shirt, .jeans{
+  padding: 10px 15px
+}
+  .zipper .img, .t-shirt .img, .jeans .img{
+    height: 300px;
+}
+.all_categories_heading{
+  font-size: 40px !important;
+}
+}
