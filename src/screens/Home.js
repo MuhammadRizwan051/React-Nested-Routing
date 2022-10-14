@@ -15,10 +15,9 @@ import ResponsiveAppBar from '../AppBar'
 
 
 function Home(props) {
-  // let navigate = useNavigate();
-  let filterList1 = props.details.filter((e) => { return e.title == "Zipper" })
-  let filterList2 = props.details.filter((e) => { return e.title == "Jeans" })
-  let filterList3 = props.details.filter((e) => { return e.title == "T-shirt" })
+  let filterList1 = props.details.filter((e) => { return e.title === "Zipper" })
+  let filterList2 = props.details.filter((e) => { return e.title === "Jeans" })
+  let filterList3 = props.details.filter((e) => { return e.title === "T-shirt" })
   return (
     <>
       <ResponsiveAppBar />
@@ -213,8 +212,6 @@ function Home(props) {
             </Grid>
           ))}
         </Grid>
-
-        {/* <button onClick={() => navigate("/about")}>Go to About</button> */}
       </div>
     </>
   );

@@ -14,7 +14,7 @@ import ResponsiveAppBar from '../AppBar'
 
 
 function Zipper(props) {
-    let filterList = props.details.filter((e) => { return e.title == "Zipper" })
+    let filterList = props.details.filter((e) => { return e.title === "Zipper" })
 
     return (
         <>

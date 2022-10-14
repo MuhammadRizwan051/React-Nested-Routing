@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../screens/Home";
 import Jeans from "../screens/Jeans";
 import T_shirt from "../screens/T_shirt";

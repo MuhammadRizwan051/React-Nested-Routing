@@ -1,8 +1,9 @@
 import React from 'react'
+import { Typography } from "@mui/material";
 
 function NotFound() {
   return (
-    <h1>Error 404</h1>
+    <Typography color='error' variant='h2' align='center' style={{ fontWeight: 'bold', fontFamily: "monospace"}}>Error 404</Typography>
   )
 }
 

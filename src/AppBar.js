@@ -1,45 +1,19 @@
-// import React from "react";
-// import {Link} from "react-router-dom";
-
-// function AppBar() {
-//   return (
-//     <>
-//       <Link to='/'>Home</Link>
-//       <Link to='/about'>About</Link>
-//       <Link to='/contact'>Contact</Link>
-//       <Link to='/dashboard'>Dashboard</Link>
-//     </>
-//   );
-// }
-
-// export default AppBar;
-
-
-
-
-
-
 
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { NavLink } from "react-router-dom";
 import "./App.css"
 
 
 // const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -48,9 +22,9 @@ const ResponsiveAppBar = () => {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -61,28 +35,9 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" style={{backgroundColor:'black'}}>
+    <AppBar position="static" style={{ backgroundColor: 'black' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography> */}
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -112,51 +67,29 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              
-              <MenuItem onClick={handleCloseNavMenu}>
-                <NavLink to='/' className="dashboard_links" style={{textDecoration:'none'}}>Home</NavLink>
-                <NavLink to='/jeans' className="dashboard_links" style={{textDecoration:'none'}}>Jeans</NavLink>
-                <NavLink to='/t-shirt' className="dashboard_links" style={{textDecoration:'none'}}>T-shirt</NavLink>
-                <NavLink to='/zipper' className="dashboard_links" style={{textDecoration:'none'}}>Zipper</NavLink>
-                <NavLink to='/dashboard'className="dashboard_links" style={{textDecoration:'none'}}>Dashboard</NavLink>
+
+              <MenuItem onClick={handleCloseNavMenu} style={{padding:'0px'}} >
+                <Box style={{ display: 'flex', flexDirection: 'column', backgroundColor: 'black', width: '50vw', padding: '40px 30px', marginTop:'-8px',marginBottom:'-8px'}}>
+                  <NavLink to='/' end className="dashboard_links mobile_links" style={{color:'white', textDecoration: 'none' }}>Home</NavLink>
+                  <NavLink to='/jeans' className="dashboard_links mobile_links" style={{color:'white', textDecoration: 'none' }}>Jeans</NavLink>
+                  <NavLink to='/t-shirt' className="dashboard_links mobile_links" style={{color:'white', textDecoration: 'none' }}>T-shirt</NavLink>
+                  <NavLink to='/zipper' className="dashboard_links mobile_links" style={{color:'white', textDecoration: 'none' }}>Zipper</NavLink>
+                  <NavLink to='/dashboard' className="dashboard_links mobile_links" style={{color:'white', textDecoration: 'none' }}>Dashboard</NavLink>
+                </Box>
               </MenuItem>
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },textAlign:'center', padding:'10px 0px', fontSize:'25px', fontFamily:'cursive'}}>
-            <NavLink to='/' className="dashboard_links" style={{color:'inherit', textDecoration:'none', flexGrow: 1}}>Home</NavLink>
-            <NavLink to='/jeans' className="dashboard_links" style={{color:'inherit', textDecoration:'none', flexGrow: 1}}>Jeans</NavLink>
-            <NavLink to='/t-shirt' className="dashboard_links" style={{color:'inherit', textDecoration:'none', flexGrow: 1}}>T-shirt</NavLink>
-            <NavLink to='/zipper' className="dashboard_links" style={{color:'inherit', textDecoration:'none', flexGrow: 1}}>Zipper</NavLink>
-            <NavLink to='/dashboard' className="dashboard_links" style={{color:'inherit', textDecoration:'none', flexGrow: 1}}>Dashboard</NavLink>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, textAlign: 'center', padding: '10px 0px', fontSize: '25px', fontFamily: 'cursive' }}>
+            <NavLink to='/' end className="dashboard_links" style={{ color: 'white', textDecoration: 'none', flexGrow: 1 }}>Home</NavLink>
+            <NavLink to='/jeans' className="dashboard_links" style={{ color: 'white', textDecoration: 'none', flexGrow: 1 }}>Jeans</NavLink>
+            <NavLink to='/t-shirt' className="dashboard_links" style={{ color: 'white', textDecoration: 'none', flexGrow: 1 }}>T-shirt</NavLink>
+            <NavLink to='/zipper' className="dashboard_links" style={{ color: 'white', textDecoration: 'none', flexGrow: 1 }}>Zipper</NavLink>
+            <NavLink to='/dashboard' className="dashboard_links" style={{ color: 'white', textDecoration: 'none', flexGrow: 1 }}>Dashboard</NavLink>
           </Box>
 
           <Box>
-            {/* <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip> */}
             <Menu
-              sx={{ mt: '45px'}}
+              sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{

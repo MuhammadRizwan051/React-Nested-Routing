@@ -14,7 +14,7 @@ import ResponsiveAppBar from '../AppBar'
 
 
 function T_shirt(props) {
-  let filterList = props.details.filter((e) => { return e.title == "T-shirt" })
+  let filterList = props.details.filter((e) => { return e.title === "T-shirt" })
   return (
     <>
       <ResponsiveAppBar />

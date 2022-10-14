@@ -3,12 +3,28 @@
 }
 
 .dashboard_links:hover{
-  color: coral !important;
-}
-.dashboard_links:focus{
-  color: yellow !important;
+  color: red !important;
   text-decoration: underline !important;
 }
+.active{
+  color: yellow !important;
+}
+.mobile_links{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+
+
+@media screen and (min-width:500px){
+  .left{
+    width:'40%' !important;
+  }  
+  .right{
+    width:'50%' !important;
+  }  
+}
+
 
 
 
